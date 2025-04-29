@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo de Matemática</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Jogo de Matemática</h1>
+    <p>Escolha o modo do jogo</p>
+    <button onclick="iniciarJogo('basico')">Modo Básico</button>
+    <button onclick="iniciarJogo('desafio')">Modo Desafio</button>
+
+    <div id="area-jogo" style="display: none;">
+      <p id="pergunta"></p>
+
+      <input
+        type="number"
+        id="resposta"
+        placeholder="Digite sua resposta"
+      />
+
+      <button onclick="verificarResposta()">Responder</button>
+
+      <!-- Aqui corrigimos a sintaxe do atributo id -->
+      <p id="resultado"></p>
+
+      <button onclick="novaPergunta()">Nova Pergunta</button>
+
+      <!-- Usamos 'pontuacao' sem acento para bater com o JS -->
+      <p>Pontuação: <span id="pontuacao">0</span></p>
+    </div>
+  </div>
+
+  <!-- Inclua seu script JS ao final do body -->
+  <script src="script.js"></script>
+</body>
+</html>
